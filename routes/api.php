@@ -16,3 +16,11 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('api/design/get_random_nums/{min}/{max}/{num}/{reduplicatable}','DemoController@getRandomNums');
+
+Route::get('get_random_nums2','Api\Design\DemoController@getRandomNums');
+
+Route::get('get_random_nums1', function () {
+    return 123;
+});
