@@ -19,7 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('api/design/get_random_nums/{min}/{max}/{num}/{reduplicatable}','DemoController@getRandomNums');
 
-Route::get('get_random_nums2','Api\Design\DemoController@getRandomNums');
+Route::get('get_random_nums','Api\Design\DemoController@getRandomNums');
 
 Route::get('get_random_nums1', function () {
     return 123;
