@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api\Design;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redis;
 
 class DemoController extends Controller
 {
@@ -27,7 +28,7 @@ class DemoController extends Controller
         $reduplicatable = $request['reduplicatable'];
 
         $data = array();
-        if($num > ($max-$min+1)){
+        if($num > ($max-$min+1) && $reduplicatable == 0){
             $this->renderFailJson('','411','num数量不对');
         }
         set_time_limit(0);
@@ -38,6 +39,8 @@ class DemoController extends Controller
                 $data[] =mt_rand($min,$max);
             }
         }
+
+
         $res['rand_num'] = array_values($data);
         $res['count'] = $num;
 
