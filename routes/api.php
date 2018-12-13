@@ -19,7 +19,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('api/design/get_random_nums/{min}/{max}/{num}/{reduplicatable}','DemoController@getRandomNums');
 
+Route::post('api/design/chat','WeiXinChatRobotController@chat');
+
 Route::get('get_random_nums','Api\Design\DemoController@getRandomNums');
+
+Route::post('chat','Api\Design\WeiXinChatRobotController@chat');
 
 Route::get('get_random_nums1', function () {
     return 123;
