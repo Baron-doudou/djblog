@@ -60,4 +60,5 @@ class DemoController extends Controller
         shuffle($return_arr);
         return $return_arr;
     }
+
 }

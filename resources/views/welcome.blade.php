@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                   诚焱仓库管理系统
                 </div>
 
                 <div class="links">
